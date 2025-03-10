@@ -1,0 +1,148 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    transition: 0.5s ease;
+}
+
+/* Neon Text */
+.neon-text {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px blue, 0 0 40px blue;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    border-bottom: 2px solid cyan;
+}
+
+/* 🎨 New Neon Navigation Bar */
+.neon-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.neon-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.neon-nav ul li {
+    position: relative;
+}
+
+.neon-nav ul li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: cyan;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    text-shadow: 0 0 5px cyan, 0 0 10px blue;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.neon-nav ul li a:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 10px cyan, 0 0 20px blue, 0 0 30px cyan;
+}
+
+/* Add Animation */
+.neon-nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 10px cyan, 0 0 20px blue, 0 0 30px cyan;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.neon-nav ul li a:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .neon-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Neon Button */
+.neon-button {
+    margin-top: 10px;
+    padding: 12px 24px;
+    background: black;
+    border: 2px solid cyan;
+    color: cyan;
+    font-size: 1rem;
+    cursor: pointer;
+    text-shadow: 0 0 5px cyan, 0 0 10px blue;
+    box-shadow: 0 0 5px cyan, 0 0 10px blue, 0 0 15px cyan;
+    transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 10px cyan, 0 0 20px blue, 0 0 30px cyan;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #111;
+    color: #ddd;
+}
+
+.dark-mode .neon-text {
+    text-shadow: 0 0 5px lime, 0 0 10px green, 0 0 20px lime;
+}
+
+.dark-mode .neon-nav ul li a {
+    color: lime;
+    border-color: lime;
+    text-shadow: 0 0 5px lime, 0 0 10px green;
+}
+
+.dark-mode .neon-nav ul li a:hover {
+    background: lime;
+    color: black;
+    box-shadow: 0 0 10px lime, 0 0 20px green, 0 0 30px lime;
+}
+
+.dark-mode .neon-button {
+    border: 2px solid lime;
+    color: lime;
+    box-shadow: 0 0 5px lime, 0 0 10px green, 0 0 15px lime;
+}
+
+.dark-mode .neon-button:hover {
+    background: lime;
+    color: black;
+    box-shadow: 0 0 10px lime, 0 0 20px green, 0 0 30px lime;
+}
+
+/* Footer */
+footer {
+    padding: 15px;
+    margin-top: 30px;
+    border-top: 2px solid cyan;
+}
